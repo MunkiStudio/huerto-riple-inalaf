@@ -1,0 +1,56 @@
+.container {
+  max-width: 960px;
+}
+
+.bg-overlay {
+	background: rgba(0, 0, 0, 0.2);
+	height: 100%;
+}
+
+.lil-line {
+	height: 2px;
+	margin: 15px auto;
+	width: 20%;
+	display: block;
+	background: white;
+}
+
+.btn {
+	@include gentium(400, 1.2em, white);
+	background: $gray-base;
+	padding: 10px 20px;
+	border-radius: 3px;
+	@include box-shadow(0px 2px 4px 0px rgba(0,0,0,0.5));
+	@include transition(0.2s);
+	&:hover {
+		color: white;
+		@include box-shadow(0px 0px 0px 0px rgba(0,0,0,0));
+	}
+}
+
+.card {
+	background: white;
+	border-radius: 2px;
+	overflow: hidden;
+	margin: 5px;
+	@include box-shadow(0px 1px 2px 0px rgba(0,0,0,0.3));
+	@include transition(0.3s);
+	&:hover {
+		@include box-shadow(0px 2px 5px 0px rgba(0,0,0,0.6));
+		@include scale(1.01);
+	}
+	.content {
+		padding: 14px 12px;
+		h5 {
+			@include gentium(700, 1.3em, $gray-base);
+		}
+		p, li {
+			@include gentium(400, 1em, $gray-light);
+		}
+		ul {
+			list-style: none;
+			padding: 0;
+			line-height: 1.8em;
+		}
+	}
+}

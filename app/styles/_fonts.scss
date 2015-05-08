@@ -1,0 +1,16 @@
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic);
+@import url(http://fonts.googleapis.com/css?family=Gentium+Basic:400,700,400italic);
+
+@mixin playfair($weight, $size, $color) {
+	font-family: 'Playfair Display', serif;
+	font-weight: $weight;
+	font-size: $size;
+	color: $color;
+}
+
+@mixin gentium($weight, $size, $color) {
+	font-family: 'Gentium Basic', serif;
+	font-weight: $weight;
+	font-size: $size;
+	color: $color;
+}

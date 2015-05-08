@@ -1,0 +1,128 @@
+// Landing
+
+header {
+	background: lighten($dark-blue, 30%) url(../images/bg-header.png) center center no-repeat;
+	height: 100vh;
+	display: block;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+  	overflow: hidden;
+
+	nav {
+		padding: 10px 0;
+		h1 a, .btn-menu {
+			@include playfair(400, 0.6em, rgba(255,255,255,0.6));
+			margin: 0 10px;
+			@include transition(0.2s);
+			&:hover {
+				color: white;
+				text-decoration: none; 
+			}
+		}
+		h1 {
+			margin: 0;
+		}
+		.btn-menu {
+			font-size: 2em;
+			margin: 5px 10px;
+		}
+	}
+
+	h2 {
+		@include playfair(400, 4.5em, white);
+		margin-top: 240px;
+	}
+}
+
+footer {
+	background: $dark-blue;
+	padding: 10px 0;
+	color: rgba(255,255,255,0.5);
+	font-size: 1em;
+	font-family: Arial, 'sans-serif';
+}
+
+// Sections
+
+.section {
+	padding: 80px 0;
+	h3 {
+		@include playfair(400, 2em, $gray-base);
+		margin-bottom: 20px;
+		i {
+			margin-bottom: 10px;
+		}
+	}
+	.btn {
+		margin: 20px 0 0;
+	}
+}
+
+.yellow {
+	background: $yellow;
+	h3 {
+		color: $brown;
+	}
+	.btn {
+		background: $brown;
+		&:hover {
+			background: darken($brown, 10%);
+		}
+	}
+}
+
+.green {
+	background: $light-green;
+	h3 {
+		color: $dark-blue;
+	}
+	.btn {
+		background: $dark-blue;
+		&:hover {
+			background: darken($dark-blue, 10%);
+		}
+	}
+}
+
+.about {
+	background: $dark-blue url(../images/bg-about.png) center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	// background-attachment: fixed;
+	height: 500px;
+	p {
+		@include playfair(400, 1.6em, white);
+		margin: 100px 0;
+	}
+}
+
+// Cards
+
+.card-product {
+	@extend .card;
+	margin: 10px 0;
+	a {
+		text-decoration: none;
+	}
+	.picture {
+		background: lighten($dark-blue, 30%) center no-repeat;
+		height: 180px;
+		-webkit-background-size: cover;
+		background-size: cover;
+	}
+}
+
+.card-news {
+	@extend .card;
+	.col-sm-2, .col-sm-10 {
+		padding: 0;
+	}
+	.picture {
+		background: lighten($dark-blue, 30%) center no-repeat;
+		-webkit-background-size: cover;
+		background-size: cover;
+		min-height: 140px;
+	}
+}
